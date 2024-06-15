@@ -1,7 +1,4 @@
 # Tabs-Reminder-Extension
-# Tabs Reminder Extension
-
-![Insert Animated Icon or GIF of your extension here]
 
 Tabs Reminder is a browser extension designed to help users manage and organize their open tabs effectively by providing a reminder feature. It allows users to save tab details along with links and set reminders to complete tasks associated with each tab.
 
@@ -30,3 +27,27 @@ Tabs Reminder is a browser extension designed to help users manage and organize 
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/tabs-reminder.git
+2. Navigate to chrome://extensions/ (for Chrome) or about add-ons (for Firefox) in your browser.
+3. Enable Developer Mode.
+4. Click on "Load unpacked" and select the tabs-reminder directory.
+
+### Usage
+1. Saving Tabs:
+   - Click on the extension icon in the browser toolbar.
+   - You can just select the tab you want to save details for.
+   - Optionally, could you add a reminder for the tab?
+
+2. Managing Tabs:
+   - View saved tabs and reminders by clicking on the extension icon.
+   - Edit or delete saved tabs and reminders as needed.
+
+3. Getting Reminders:
+   - Receive notifications when a saved reminder is due.
+
+### Contributing
+-**Contributions are welcome! Here's how you can contribute:**
+1. Fork the repository.
+2. Create your feature branch (git checkout -b feature/your-feature).
+3. Commit your changes (git commit -am 'Add some feature').
+4. Push to the branch (git push origin feature/your-feature).
+5. Open a pull request.
