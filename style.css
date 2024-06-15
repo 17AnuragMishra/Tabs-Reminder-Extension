@@ -1,0 +1,135 @@
+
+body {
+    width: 300px;
+    height: 500px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url(icons/background.jpg);
+    opacity: 0.9;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+li:last-child {
+    border-bottom: none;
+}
+.top-heading{
+    padding: 20px;
+    color: white;
+    border: 2px lawngreen;
+    border: 1px solid black;
+}
+
+    /* }<!---Add current tab ---> */
+#add-tab-btn{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+#add-tab-btn{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  #add-tab-btn:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  #add-tab-btn:hover{
+    padding-right: 25px;
+  }
+  
+  #add-tab-btn:hover:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+    /* Edit Button */
+.edit-btn {
+    border-radius: 1px;
+    display: inline;
+    margin-right: 10px;
+}
+.edit-btn:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+    /* Delete Button */
+.delete-btn {
+    float: right;
+    margin-right: 10px;
+    color: red;
+}
+.delete-btn:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+.tab-title {
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;  
+}
+.pending-tabs-list {
+    margin: 20px;
+
+  }
+  
+  .pending-tabs-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pending-tabs-list li {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding: 10px;
+    margin: 5px 0px;
+    border: 2px solid #ccc;
+  }
+  
+  /* .pending-tabs-list li:last-child {
+    border-bottom: none;
+  } */
+  
+  .pending-tabs-list a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  .pending-tabs-list a:hover {
+    
+    background-color: rgb(red, green, blue);
+  }
+  
+  .pending-tabs-list .edit-btn, .pending-tabs-list .delete-btn {
+    margin-left: 10px;
+  }

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "description": "Never forget unfinished tasks again. Save and get reminders for your pending tabs to ensure nothing slips through the cracks.",
+  "name": "Tab Reminder",
+  "icons": {
+    "16": "icons/icon-24.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "action": {
+    "default_popup": "extension.html",
+    "default_icon": {
+      "16": "icons/icon-24.png",
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+    
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["main.js"]
+    }
+  ],
+  "permissions": ["tabs", "storage", "activeTab", "notifications"]
+}
