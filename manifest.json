@@ -26,5 +26,5 @@
       "js": ["main.js"]
     }
   ],
-  "permissions": ["tabs", "storage", "activeTab", "notifications"]
+  "permissions": ["tabs", "storage", "activeTab", "notifications", "alarms", "background"]
 }
