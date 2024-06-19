@@ -4,7 +4,7 @@ body {
     height: 500px;
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url(icons/background.jpg);
+    background-image: url(icons/Final.jpeg);
     opacity: 0.9;
 }
 ul {
@@ -15,6 +15,7 @@ ul {
 li {
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    text-align: center;
 }
 li:last-child {
     border-bottom: none;
@@ -22,7 +23,6 @@ li:last-child {
 .top-heading{
     padding: 20px;
     color: white;
-    border: 2px lawngreen;
     border: 1px solid black;
 }
 
@@ -69,24 +69,32 @@ li:last-child {
 
     /* Edit Button */
 .edit-btn {
-    border-radius: 1px;
+    color: #000000;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background: gray;
     display: inline;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .edit-btn:hover{
     cursor: pointer;
-    background-color: transparent;
+    transition: ease-out;
+}
+.edit-btn:active{
+  transform: scale(0.96);
 }
 
     /* Delete Button */
 .delete-btn {
     float: right;
-    margin-right: 10px;
+    margin-right: 5px;
     color: red;
 }
 .delete-btn:hover{
     cursor: pointer;
-    background-color: transparent;
+}
+.delete-btn:active{
+  transform: scale(0.96);
 }
 
 
@@ -98,21 +106,14 @@ li:last-child {
 }
 .pending-tabs-list {
     margin: 20px;
-
+    padding-bottom: 5px;
   }
-  
-  .pending-tabs-list ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
   .pending-tabs-list li {
     display: flex;
-    justify-content: right;
-    align-items: right;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    margin: 5px 0px;
+    margin: 5px;
     border: 2px solid #ccc;
   }
   
@@ -122,14 +123,21 @@ li:last-child {
   
   .pending-tabs-list a {
     text-decoration: none;
-    color: #337ab7;
-  }
+    color: #f4511e;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    padding-left: 10px;
+}
   
   .pending-tabs-list a:hover {
     
     background-color: rgb(red, green, blue);
   }
   
-  .pending-tabs-list .edit-btn, .pending-tabs-list .delete-btn {
+  .pending-tabs-list .edit-btn {
     margin-left: 10px;
   }
+  
