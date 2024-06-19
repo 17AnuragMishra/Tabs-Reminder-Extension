@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("This tab or link already exists in the list.");
                 return;
             }
+
             const tabData = {
                 title: currentTab.title,
-                url: currentTab.url,
-                reminder: { type: 'none' }
+                url: currentTab.url
             };
+
             pendingTabs.push(tabData);
             chrome.storage.local.set({ pendingTabs: pendingTabs });
             updatePendingTabsList();
@@ -40,14 +41,29 @@ function showNotification(title, message) {
 
 function updatePendingTabsList() {
     const pendingTabsList = document.getElementById("pending-tabs-list");
-    pendingTabsList.innerHTML = "";
+    pendingTabsList.innerText = "";
     pendingTabs.forEach((tab, index) => {
         const listItem = document.createElement("li");
         const tabLink = document.createElement("a");
         tabLink.href = tab.url;
         tabLink.target = "_blank";
-        tabLink.textContent = tab.title.substring(0, 25) + "...";
+        tabLink.textContent = tab.title.substring(0, 25)+"...";
         listItem.appendChild(tabLink);
+        // this is what I could not implement.
+
+        const reminderInput = document.createElement("input");
+        reminderInput.type = "datetime-local";
+        reminderInput.className = "reminder-input";
+        reminderInput.value = tab.reminderTime ? new Date(tab.reminderTime).toISOString().slice(0, 16) : "";
+        reminderInput.addEventListener("change", function () {
+            const reminderTime = new Date(reminderInput.value).getTime();
+            pendingTabs[index].reminderTime = reminderTime;
+            chrome.storage.local.set({ pendingTabs: pendingTabs });
+        });
+        listItem.appendChild(reminderInput);
+        
+        //ends here
+
         const editBtn = document.createElement("button");
         editBtn.textContent = "Edit";
         editBtn.className = "edit-btn";
