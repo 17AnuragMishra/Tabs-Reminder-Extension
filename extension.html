@@ -5,13 +5,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="top-heading">TABs REMINDER</h1>
-    <button id="add-tab-btn">Add Current Tab</button>
-    <div class="pending-tabs-list">
-        <ul id="pending-tabs-list">
-          <!-- list items will be generated dynamically -->
-        </ul>
+    <div class="navbar">
+        <div class="navbar-left">Tabs Reminder</div>
+        <div class="navbar-right" id="navbar-right"></div>
     </div>
+    <div class="container">
+        <div id="user-info" class="user-info" style="display:none;"></div>
+        <div class="add-search-container">
+            <input type="text" id="search-input" placeholder="Search tabs...">
+            <button id="add-tab-btn">Add Current Tab</button>
+        </div>
+        <div class="pending-tabs-list">
+            <ul id="pending-tabs-list">
+                <!-- list items will be generated dynamically -->
+            </ul>
+            <div id="empty-message" class="empty-message" style="display:none;"></div>
+        </div>
+        <div id="auth-promo" class="auth-promo" style="display:none;"></div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="auth-modal" style="display:none;">
+        <div class="auth-modal-content">
+            <span id="close-auth-modal" class="close-auth-modal">&times;</span>
+            <h2 id="auth-modal-title">Login</h2>
+            <form id="auth-form">
+                <input type="text" id="auth-name" placeholder="Name" style="display:none;" />
+                <input type="email" id="auth-email" placeholder="Email" required />
+                <input type="password" id="auth-password" placeholder="Password" required />
+                <button type="submit" id="auth-submit-btn">Login</button>
+            </form>
+            <div class="auth-switch">
+                <span id="switch-auth-mode">Don't have an account? Register</span>
+            </div>
+            <div id="auth-error" class="auth-error"></div>
+        </div>
+    </div>
+
     <script src="extension.js"></script>
 </body>
 </html>
